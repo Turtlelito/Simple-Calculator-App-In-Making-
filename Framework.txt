@@ -1,0 +1,29 @@
+# Calculator Structure
+
+1. Input display (Input appears when typing)
+2. Numbers 1-9, parenthesis,period, and % GUI below
+3. Operations GUI
+4. Backspace button and clear button (AC)
+5. Be able to copy paste previous answers
+6. Have a button that pops up the history log when pressed
+7. Close the program if you press a keybind
+
+
+
+
+
+# Future Plans
+5. An extend button to show the other buttons
+6. Extra buttons include square root, pi, square, !, Rad, sin, cos, 
+tan, Inv, e, In, and log
+
+
+Framework
+
+Calculator Folder
+ Main.py # runs the program
+ gui.py  # handles the GUI
+ logic.py # handles the math logic
+ history.py # handles the history log
+ clipboard.py # enables copy pasting
+ assets # for future assets to be added
