@@ -27,7 +27,7 @@ def build_number_buttons(window, display):
                              text="9",
                              fg_color="#404040",
                              hover_color="#505050",
-                             command=lambda: logic.display_appender(display, 9))
+                             command=lambda: logic.display_numbers_appender(display, 9))
     button_9.grid(row=3, column=2, padx=5, pady=(10))
 
     button_8 = CTk.CTkButton(window, 
@@ -37,7 +37,7 @@ def build_number_buttons(window, display):
                                 text="8",
                                 fg_color="#404040",
                                 hover_color="#505050",
-                                command=lambda: logic.display_appender(display, 8))
+                                command=lambda: logic.display_numbers_appender(display, 8))
     button_8.grid(row=3, column=1, padx=5, pady=(10))
 
     button_7 = CTk.CTkButton(window, 
@@ -47,7 +47,7 @@ def build_number_buttons(window, display):
                              text="7",
                              fg_color="#404040",
                              hover_color="#505050",
-                             command=lambda: logic.display_appender(display, 7))
+                             command=lambda: logic.display_numbers_appender(display, 7))
     button_7.grid(row=3, column=0, padx=5, pady=(10))
 
     button_6 = CTk.CTkButton(window, 
@@ -57,7 +57,7 @@ def build_number_buttons(window, display):
                                 text="6",
                                 fg_color="#404040",
                                 hover_color="#505050",
-                                command=lambda: logic.display_appender(display, 6))
+                                command=lambda: logic.display_numbers_appender(display, 6))
     button_6.grid(row=4, column=2, padx=5, pady=10)
 
     button_5 = CTk.CTkButton(window, 
@@ -67,7 +67,7 @@ def build_number_buttons(window, display):
                              text="5",
                              fg_color="#404040",
                              hover_color="#505050",
-                             command=lambda: logic.display_appender(display, 5))
+                             command=lambda: logic.display_numbers_appender(display, 5))
     button_5.grid(row=4, column=1, padx=5, pady=10)
 
     button_4 = CTk.CTkButton(window, 
@@ -77,7 +77,7 @@ def build_number_buttons(window, display):
                                 text="4",
                                 fg_color="#404040",
                                 hover_color="#505050",
-                                command=lambda: logic.display_appender(display, 4))
+                                command=lambda: logic.display_numbers_appender(display, 4))
     button_4.grid(row=4, column=0, padx=5, pady=10)
 
     button_3 = CTk.CTkButton(window, 
@@ -87,7 +87,7 @@ def build_number_buttons(window, display):
                              text="3",
                              fg_color="#404040",
                              hover_color="#505050",
-                             command=lambda: logic.display_appender(display, 3))
+                             command=lambda: logic.display_numbers_appender(display, 3))
     button_3.grid(row=5, column=2, padx=5, pady=10)
 
     button_2 = CTk.CTkButton(window, 
@@ -97,7 +97,7 @@ def build_number_buttons(window, display):
                                 text="2",
                                 fg_color="#404040",
                                 hover_color="#505050",
-                                command=lambda: logic.display_appender(display, 2))
+                                command=lambda: logic.display_numbers_appender(display, 2))
     button_2.grid(row=5, column=1, padx=5, pady=10)
 
     button_1 = CTk.CTkButton(window, 
@@ -107,7 +107,7 @@ def build_number_buttons(window, display):
                              text="1",
                              fg_color="#404040",
                              hover_color="#505050",
-                             command=lambda: logic.display_appender(display, 1))
+                             command=lambda: logic.display_numbers_appender(display, 1))
     button_1.grid(row=5, column=0, padx=5, pady=10)
 
     button_0 = CTk.CTkButton(window, 
@@ -117,7 +117,7 @@ def build_number_buttons(window, display):
                                 text="0",
                                 fg_color="#404040",
                                 hover_color="#505050",
-                                command=lambda: logic.display_appender(display, 0))
+                                command=lambda: logic.display_numbers_appender(display, 0))
     button_0.grid(row=6, column=0, padx=5, pady=10)
     build_operation_buttons(window, display)
     
@@ -144,7 +144,8 @@ def build_operation_buttons(window, display):
                              font=("Arial", 30),
                              text="%",
                              fg_color="#555555",
-                             hover_color="#6B6B6B")
+                             hover_color="#6B6B6B",
+                             command=lambda: logic.display_operations_appender(display, "%"))
     button_percentage.grid(row=2, column=1, padx=5, pady=(10, 10))
 
     button_division = CTk.CTkButton(window, 
@@ -153,7 +154,8 @@ def build_operation_buttons(window, display):
                                 font=("Arial", 30),
                                 text="÷",
                                 fg_color="#555555",
-                                hover_color="#6B6B6B")
+                                hover_color="#6B6B6B",
+                                command=lambda: logic.display_operations_appender(display, "÷"))
     button_division.grid(row=2, column=2, padx=5, pady=(10, 10))
 
     button_multiplication = CTk.CTkButton(window, 
@@ -162,7 +164,8 @@ def build_operation_buttons(window, display):
                              font=("Arial", 30),
                              text="x",
                              fg_color="#555555",
-                             hover_color="#6B6B6B")
+                             hover_color="#6B6B6B",
+                             command=lambda: logic.display_operations_appender(display, "x"))
     button_multiplication.grid(row=2, column=3, padx=5, pady=(10, 10))
 
     button_subtraction = CTk.CTkButton(window, 
@@ -171,7 +174,8 @@ def build_operation_buttons(window, display):
                                 font=("Arial", 30),
                                 text="-",
                                 fg_color="#555555",
-                                hover_color="#6B6B6B")
+                                hover_color="#6B6B6B",
+                                command=lambda: logic.display_operations_appender(display, "-"))
     button_subtraction.grid(row=3, column=3, padx=5, pady=10)
 
     button_addition = CTk.CTkButton(window, 
@@ -180,7 +184,8 @@ def build_operation_buttons(window, display):
                              font=("Arial", 30),
                              text="+",
                              fg_color="#555555",
-                             hover_color="#6B6B6B")
+                             hover_color="#6B6B6B",
+                             command=lambda: logic.display_operations_appender(display, "+"))
     button_addition.grid(row=4, column=3, padx=5, pady=10)
 
     button_equals = CTk.CTkButton(window, 
@@ -192,14 +197,15 @@ def build_operation_buttons(window, display):
                                 hover_color="#F44336")
     button_equals.grid(row=6, column=3, padx=5, pady=10)
 
-    button_period = CTk.CTkButton(window, 
+    button_decimal = CTk.CTkButton(window, 
                              width=70, 
                              height=70, 
                              font=("Arial", 30),
                              text=".",
                              fg_color="#555555",
-                             hover_color="#6B6B6B")
-    button_period.grid(row=5, column=3, padx=5, pady=10)
+                             hover_color="#6B6B6B",
+                             command=lambda: logic.display_decimal_appender(display))
+    button_decimal.grid(row=5, column=3, padx=5, pady=10)
 
     button_delete = CTk.CTkButton(window, 
                                 width=70, 
@@ -217,7 +223,8 @@ def build_operation_buttons(window, display):
                                 font=("Arial", 30),
                                 text="√",
                                 fg_color="#555555",
-                                hover_color="#6B6B6B")
+                                hover_color="#6B6B6B",
+                                command=lambda: logic.display_operations_appender(display, "√"))
     button_square_root.grid(row=6, column=2, padx=5, pady=10)
     build_history_button(window)
 
