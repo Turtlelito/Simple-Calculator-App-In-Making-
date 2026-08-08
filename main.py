@@ -18,6 +18,7 @@ calculator_window.resizable(False, False)
 # GUI Creation
 gui.build_display(calculator_window)
 
+# Starts and maintains program
 calculator_window.mainloop()
 
 

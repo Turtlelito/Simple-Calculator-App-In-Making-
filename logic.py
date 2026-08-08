@@ -24,6 +24,10 @@ def display_clear(display):
 # Operations
 def display_decimal_appender(display):
     current_display = display.get()
+
+    if current_display == "":
+         return
+    
     last_operator = max(current_display.rfind("+"),
                         current_display.rfind("-"),
                         current_display.rfind("x",),
@@ -35,4 +39,15 @@ def display_decimal_appender(display):
         display.insert("end", ".")
 
 def display_operations_appender(display, operator):
-    display.insert("end", operator)
+    current_display = display.get()
+
+    if current_display == "":
+            return
+    
+    last_character = current_display[-1]
+
+    
+
+    if last_character not in ["%", "÷", "x", "+", "-", "."]:
+        display.insert("end", operator)
+
