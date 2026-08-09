@@ -194,7 +194,8 @@ def build_operation_buttons(window, display):
                                 font=("Arial", 30),
                                 text="=",
                                 fg_color="#D32F2F",
-                                hover_color="#F44336")
+                                hover_color="#F44336",
+                                command=lambda: logic.calculate_operation(display))
     button_equals.grid(row=6, column=3, padx=5, pady=10)
 
     button_decimal = CTk.CTkButton(window, 
